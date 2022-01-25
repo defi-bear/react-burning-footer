@@ -1,10 +1,13 @@
 import React from "react";
 import "./index.scss";
 
-function App() {
+function BurningFooter({ height, backgroundColor, children }) {
   return (
     <div className="main">
-      <div className="footer">
+      <div
+        className="footer"
+        style={{ minHeight: height, "--footer-background": backgroundColor }}
+      >
         <div className="bubbles">
           {new Array(128).fill(0).map((_, i) => (
             <div
@@ -20,6 +23,7 @@ function App() {
             />
           ))}
         </div>
+        <div className="children">{children}</div>
       </div>
       <svg
         style={{
@@ -52,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default BurningFooter;

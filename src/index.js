@@ -4,7 +4,9 @@ import App from "./components";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App height={100} backgroundColor="#f0554d">
+      <div>asdf</div>
+    </App>
   </React.StrictMode>,
   document.getElementById("root")
 );
