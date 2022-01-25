@@ -12,7 +12,7 @@ body {
     bottom: 0;
     .footer {
       z-index: 1;
-      --footer-background: red;
+      --footer-background: #f0554d;
       display: grid;
       position: relative;
       grid-area: footer;
@@ -37,44 +37,8 @@ body {
           transform: translate(-50%, 100%);
         }
       }
-      .content {
+      .children {
         z-index: 2;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-gap: 4rem;
-        padding: 2rem;
-        background: var(--footer-background);
-        a,
-        p {
-          color: #f5f7fa;
-          text-decoration: none;
-        }
-        b {
-          color: white;
-        }
-        p {
-          margin: 0;
-          font-size: 0.75rem;
-        }
-        > div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          > div {
-            margin: 0.25rem 0;
-            > * {
-              margin-right: 0.5rem;
-            }
-          }
-          .image {
-            align-self: center;
-            width: 4rem;
-            height: 4rem;
-            margin: 0.25rem 0;
-            background-size: cover;
-            background-position: center;
-          }
-        }
       }
     }
   }

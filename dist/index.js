@@ -1,11 +1,19 @@
 import React from "react";
 import "./index.scss";
 
-function App() {
+function BurningFooter({
+  height,
+  backgroundColor,
+  children
+}) {
   return /*#__PURE__*/React.createElement("div", {
     className: "main"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "footer"
+    className: "footer",
+    style: {
+      minHeight: height,
+      "--footer-background": backgroundColor
+    }
   }, /*#__PURE__*/React.createElement("div", {
     className: "bubbles"
   }, new Array(128).fill(0).map((_, i) => /*#__PURE__*/React.createElement("div", {
@@ -18,7 +26,9 @@ function App() {
       "--time": `${2 + Math.random() * 2}s`,
       "--delay": `${-1 * (2 + Math.random() * 2)}s`
     }
-  })))), /*#__PURE__*/React.createElement("svg", {
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "children"
+  }, children)), /*#__PURE__*/React.createElement("svg", {
     style: {
       position: "fixed",
       top: "100vh"
@@ -41,4 +51,4 @@ function App() {
   })))));
 }
 
-export default App;
+export default BurningFooter;
